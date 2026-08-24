@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vefa Global Private Limited</title>
+<style>
+  :root {
+    --navy: #0f1f3d;
+    --navy-light: #16305c;
+    --gold: #c9a24b;
+    --bg: #f7f7f5;
+    --text: #24272b;
+    --muted: #5c6470;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--navy);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+  }
+  .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .logo span { color: var(--gold); }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+  }
+  nav a {
+    color: #e7e9ee;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  nav a:hover { color: var(--gold); }
+
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: #fff;
+    padding: 90px 24px 100px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    max-width: 640px;
+    margin: 0 auto;
+    color: #cfd6e4;
+    font-size: 1.05rem;
+  }
+  .hero .badge {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 6px 16px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  section { padding: 72px 24px; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: var(--navy);
+  }
+  .section-sub {
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 40px;
+  }
+
+  .about { background: #fff; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .stat-row {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+  }
+  .stat { text-align: left; }
+  .stat b { display: block; font-size: 1.6rem; color: var(--navy); }
+  .stat span { color: var(--muted); font-size: 0.85rem; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #e7e5e0;
+    border-radius: 10px;
+    padding: 28px 22px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(15, 31, 61, 0.08);
+  }
+  .card .icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--navy);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--navy);
+  }
+  .card p {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .contact { background: var(--navy); color: #fff; }
+  .contact h2 { color: #fff; }
+  .contact .section-sub { color: #b9c1d1; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .contact-item {
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 22px;
+  }
+  .contact-item b { display: block; color: var(--gold); margin-bottom: 8px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .contact-item a { color: #fff; text-decoration: none; }
+  .contact-item a:hover { color: var(--gold); }
+
+  footer {
+    background: #0b1730;
+    color: #8a93a6;
+    text-align: center;
+    padding: 24px;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 800px) {
+    nav ul { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">VEFA <span>GLOBAL</span></div>
+    <nav>
+      <ul>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#services">Hizmetler</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="badge">New Delhi · Est. 2016</div>
+  <h1>Vefa Global Private Limited</h1>
+  <p>2016 yılında Yeni Delhi'de kurulan Vefa Global, hızla büyüyen iş dünyasında kurumlara kapsayıcı ve çeşitli bir iş ortamı sunarak çözümler üretir.</p>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2>Hakkımızda</h2>
+      <p class="section-sub" style="margin-bottom:16px;">
+        Vefa Global, 2016 yılında Yeni Delhi'de kuruldu ve çeşitli, kapsayıcı bir iş ortamı inşa etmeye odaklanarak
+        hızla büyüyen iş dünyasındaki kurumlara çözümler sunmaktadır.
+      </p>
+      <div class="stat-row">
+        <div class="stat"><b>2016</b><span>Kuruluş Yılı</span></div>
+        <div class="stat"><b>4</b><span>Hizmet Alanı</span></div>
+        <div class="stat"><b>New Delhi</b><span>Merkez Ofis</span></div>
+      </div>
+    </div>
+    <div>
+      <p class="section-sub">
+        Stratejik iş geliştirmeden şirket kuruluşuna, eğitim ve danışmanlıktan turizme kadar geniş bir
+        hizmet yelpazesiyle yatırımcılara ve kurumlara yol gösteriyoruz.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Hizmetlerimiz</h2>
+    <p class="section-sub">Kurumlara sunduğumuz temel hizmet alanları.</p>
+    <div class="services-grid">
+      <div class="card">
+        <div class="icon">01</div>
+        <h3>İş Geliştirme</h3>
+        <p>Stratejik analiz ile pazarlama ve satış uzmanlığını bir araya getirir.</p>
+      </div>
+      <div class="card">
+        <div class="icon">02</div>
+        <h3>Şirket Kuruluşu</h3>
+        <p>Yatırımcılara ve şirket sahiplerine kritik iş sorularında destek olur.</p>
+      </div>
+      <div class="card">
+        <div class="icon">03</div>
+        <h3>Eğitim</h3>
+        <p>Ulusal ve uluslararası kaynakları kullanarak kurumsal ihtiyaçları analiz eden eğitim ve danışmanlık hizmetleri.</p>
+      </div>
+      <div class="card">
+        <div class="icon">04</div>
+        <h3>Turizm</h3>
+        <p>Uluslararası turizm geliştirme, satış operasyonları ve pazar genişletme.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>İletişim</h2>
+    <p class="section-sub">Bize aşağıdaki kanallardan ulaşabilirsiniz.</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <b>Adres</b>
+        1st Floor, A-83, Okhla Industrial Area, Okhla Phase II, New Delhi – 110020, India
+      </div>
+      <div class="contact-item">
+        <b>Telefon</b>
+        <a href="tel:+9101140522449">+91-011-4052-2449</a><br>
+        <a href="tel:+919717376667">+91-9717376667</a>
+      </div>
+      <div class="contact-item">
+        <b>E-posta</b>
+        <a href="mailto:info@vefaglobal.com">info@vefaglobal.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Vefa Global Private Limited. Tüm hakları saklıdır.
+</footer>
+
+</body>
+</html>
