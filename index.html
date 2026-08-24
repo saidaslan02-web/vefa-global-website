@@ -1,187 +1,233 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vefa Global Private Limited</title>
+<title>Vefa Global Private Limited | Consulting Partner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #0f1f3d;
-    --navy-light: #16305c;
-    --gold: #c9a24b;
-    --bg: #f7f7f5;
-    --text: #24272b;
-    --muted: #5c6470;
+    --black: #0a0a0b;
+    --black-2: #151517;
+    --white: #ffffff;
+    --off: #fafafa;
+    --text: #17181a;
+    --muted: #63666b;
+    --line: #e4e4e4;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body {
-    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Inter', -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--text);
-    background: var(--bg);
+    background: var(--white);
     line-height: 1.6;
   }
-  header {
-    background: var(--navy);
-    color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  .nav {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 24px;
-  }
-  .logo {
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-  }
-  .logo span { color: var(--gold); }
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 28px;
-  }
-  nav a {
-    color: #e7e9ee;
-    text-decoration: none;
-    font-size: 0.95rem;
-  }
-  nav a:hover { color: var(--gold); }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 100px 0; }
 
-  .hero {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-    color: #fff;
-    padding: 90px 24px 100px;
-    text-align: center;
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  .reveal-d1.is-visible { transition-delay: .08s; }
+  .reveal-d2.is-visible { transition-delay: .16s; }
+  .reveal-d3.is-visible { transition-delay: .24s; }
+  .reveal-d4.is-visible { transition-delay: .32s; }
+
+  /* Header */
+  header { position: sticky; top: 0; z-index: 30; background: var(--black); }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; max-width: 1180px; margin: 0 auto; }
+  .logo { color: #fff; font-weight: 800; font-size: 1.05rem; letter-spacing: 1px; }
+  .logo span { color: #8a8a8f; }
+  nav.links ul { list-style: none; display: flex; gap: 34px; }
+  nav.links a { color: #b9b9bd; text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color .2s ease; }
+  nav.links a:hover { color: #fff; }
+  .btn { display: inline-block; padding: 13px 26px; font-weight: 600; font-size: 0.86rem; text-decoration: none; border-radius: 2px; transition: all .2s ease; letter-spacing: 0.2px; }
+  .btn-solid { background: var(--black); color: #fff; }
+  .btn-solid:hover { background: #2b2b2e; }
+  .btn-white { background: #fff; color: var(--black); }
+  .btn-white:hover { background: #e6e6e6; }
+  .btn-outline-dark { border: 1px solid var(--black); color: var(--black); }
+  .btn-outline-dark:hover { background: var(--black); color: #fff; }
+  .btn-outline-light { border: 1px solid rgba(255,255,255,0.4); color: #fff; }
+  .btn-outline-light:hover { border-color: #fff; }
+
+  /* Hero */
+  .hero { background: var(--off); padding: 130px 0 90px; }
+  .hero .eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 26px; opacity: 0; animation: fadeUp .8s ease .05s forwards; }
+  .hero h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); font-weight: 800; letter-spacing: -1.5px; line-height: 1.04; max-width: 900px; opacity: 0; animation: fadeUp .8s ease .16s forwards; }
+  .hero p { font-size: 1.15rem; color: var(--muted); max-width: 560px; margin: 28px 0 40px; opacity: 0; animation: fadeUp .8s ease .3s forwards; }
+  .hero .cta-row { display: flex; gap: 14px; flex-wrap: wrap; opacity: 0; animation: fadeUp .8s ease .42s forwards; }
+
+  /* Marquee */
+  .marquee { background: var(--black); overflow: hidden; white-space: nowrap; padding: 16px 0; }
+  .marquee-track { display: inline-block; animation: marquee 26s linear infinite; }
+  .marquee-track span { display: inline-block; margin: 0 30px; font-weight: 700; letter-spacing: 2px; font-size: 0.82rem; text-transform: uppercase; color: #d8d8db; }
+  .marquee-track span.sep { color: #4a4a4d; margin: 0 30px; }
+
+  /* Stats */
+  .stats { background: var(--black); color: #fff; border-top: 1px solid #222; }
+  .stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); padding: 40px 24px; }
+  .stat-item { text-align: center; border-right: 1px solid #232326; padding: 8px 12px; }
+  .stat-item:last-child { border-right: none; }
+  .stat-item b { display: block; font-size: 1.9rem; font-weight: 800; }
+  .stat-item span { font-size: 0.82rem; color: #9a9a9f; }
+
+  /* Section headings */
+  .eyebrow-tag { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  h2 { font-size: clamp(1.7rem, 3.2vw, 2.3rem); font-weight: 800; letter-spacing: -0.5px; color: var(--text); margin-bottom: 16px; }
+  .section-sub { color: var(--muted); max-width: 620px; font-size: 1.02rem; }
+
+  /* Image frames — grayscale to color on hover */
+  .img-frame { overflow: hidden; border-radius: 4px; }
+  .img-frame img { transition: transform .7s cubic-bezier(.2,.8,.2,1), filter .5s ease; filter: grayscale(85%); }
+  .img-frame:hover img { transform: scale(1.06); filter: grayscale(0%); }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .about-grid .img-frame img { width: 100%; height: 440px; object-fit: cover; }
+  .about-list { margin-top: 26px; display: grid; gap: 14px; }
+  .about-list li { list-style: none; display: flex; gap: 12px; align-items: flex-start; font-size: 0.98rem; }
+  .about-list .dash { width: 18px; height: 1px; background: var(--black); margin-top: 11px; flex-shrink: 0; }
+
+  /* Feature rows */
+  .services { background: var(--off); }
+  .services-head { max-width: 640px; margin-bottom: 60px; }
+  .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 90px; }
+  .feature-row:last-of-type { margin-bottom: 0; }
+  .feature-row.rev .media { order: 2; }
+  .feature-row.rev .content { order: 1; }
+  .feature-row .media img { width: 100%; height: 380px; object-fit: cover; }
+  .feature-row h3 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 14px; }
+  .feature-row .desc { color: var(--muted); margin-bottom: 22px; }
+  .cap-list { display: grid; gap: 12px; margin-bottom: 20px; }
+  .cap-list li { list-style: none; display: flex; gap: 10px; align-items: flex-start; font-size: 0.95rem; }
+  .cap-list .dash { width: 16px; height: 1px; background: var(--black); margin-top: 10px; flex-shrink: 0; }
+  .platform-note { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+  .platform-note b { color: var(--text); font-weight: 700; }
+
+  /* Process */
+  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); margin-top: 50px; border: 1px solid var(--line); }
+  .process-item { background: #fff; padding: 32px 26px; transition: background .2s ease; }
+  .process-item:hover { background: var(--off); }
+  .process-item .step-num { font-size: 2.4rem; font-weight: 800; color: transparent; -webkit-text-stroke: 1.4px var(--black); margin-bottom: 14px; }
+  .process-item h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+  .process-item p { color: var(--muted); font-size: 0.9rem; }
+
+  /* Quote */
+  .quote-section { background: var(--black); color: #fff; text-align: center; }
+  .quote-section blockquote { max-width: 800px; margin: 0 auto; font-size: clamp(1.3rem, 2.6vw, 1.8rem); font-weight: 600; line-height: 1.5; letter-spacing: -0.3px; }
+  .quote-section cite { display: block; margin-top: 26px; color: #8a8a8f; font-style: normal; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; }
+
+  /* Why us */
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px; }
+  .why-item .num-mark { font-size: 0.85rem; font-weight: 700; color: var(--muted); margin-bottom: 14px; }
+  .why-item h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 10px; }
+  .why-item p { color: var(--muted); font-size: 0.95rem; }
+
+  /* FAQ */
+  .faq { background: var(--off); }
+  .faq-list { max-width: 780px; margin-top: 40px; }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-item summary { list-style: none; display: flex; align-items: center; justify-content: space-between; padding: 26px 4px; cursor: pointer; font-weight: 700; font-size: 1.02rem; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 1.5rem; font-weight: 400; color: var(--muted); transition: transform .25s ease; }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item p { padding: 0 4px 26px; color: var(--muted); max-width: 680px; }
+
+  /* CTA banner */
+  .cta-banner { background: var(--black); color: #fff; text-align: center; padding: 110px 24px; }
+  .cta-banner h2 { color: #fff; }
+  .cta-banner p { color: #b9b9bd; max-width: 560px; margin: 0 auto 34px; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 46px; }
+  .contact-item { background: #fff; padding: 30px 26px; }
+  .contact-item b { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 12px; }
+  .contact-item a, .contact-item div { text-decoration: none; font-size: 1rem; font-weight: 500; }
+  .contact-item a:hover { color: var(--muted); }
+
+  /* Footer */
+  footer { background: var(--black); color: #9a9a9f; padding: 60px 0 30px; }
+  .footer-grid { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding-bottom: 40px; border-bottom: 1px solid #222; }
+  .footer-brand .logo { margin-bottom: 14px; }
+  .footer-brand p { max-width: 300px; font-size: 0.9rem; color: #8a8a8f; }
+  .footer-links { display: flex; gap: 64px; flex-wrap: wrap; }
+  .footer-col h4 { color: #fff; font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .footer-col a { display: block; color: #9a9a9f; text-decoration: none; font-size: 0.92rem; margin-bottom: 10px; }
+  .footer-col a:hover { color: #fff; }
+  .footer-bottom { display: flex; justify-content: space-between; padding-top: 24px; font-size: 0.82rem; color: #6f6f74; flex-wrap: wrap; gap: 10px; }
+
+  /* Pillars */
+  .pillars {
+    background:
+      radial-gradient(120% 160% at 12% 0%, #e9eefb 0%, rgba(255,255,255,0) 55%),
+      radial-gradient(120% 160% at 88% 0%, #eef1fb 0%, rgba(255,255,255,0) 55%),
+      #ffffff;
+    padding: 90px 0 70px;
   }
-  .hero h1 {
-    font-size: 2.4rem;
-    margin-bottom: 16px;
+  .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pillar-card {
+    display: block; background: #fff; border-radius: 20px; padding: 38px 32px 30px;
+    text-decoration: none; color: inherit;
+    box-shadow: 0 18px 40px rgba(20,30,60,0.07);
+    transition: transform .35s ease, box-shadow .35s ease;
   }
-  .hero p {
-    max-width: 640px;
-    margin: 0 auto;
-    color: #cfd6e4;
-    font-size: 1.05rem;
+  .pillar-card:hover { transform: translateY(-6px); box-shadow: 0 26px 54px rgba(20,30,60,0.12); }
+  .pillar-card h3 { font-size: 1.55rem; font-weight: 700; letter-spacing: -0.4px; margin-bottom: 8px; }
+  .pillar-card .pillar-sub { display: block; color: var(--muted); font-size: 0.92rem; margin-bottom: 36px; }
+  .pillar-track {
+    position: relative; height: 46px; border-radius: 999px; background: #f3f5f9;
+    display: flex; align-items: center; padding: 0 6px; overflow: hidden;
   }
-  .hero .badge {
-    display: inline-block;
-    margin-bottom: 18px;
-    padding: 6px 16px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    border-radius: 999px;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  .pillar-arrow {
+    width: 34px; height: 34px; border-radius: 50%; background: var(--black); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-size: 1rem;
+    transition: transform .4s cubic-bezier(.2,.8,.2,1), background .3s ease;
+    position: relative; z-index: 2;
+  }
+  .pillar-card:hover .pillar-arrow { transform: translateX(calc(100% + 10px)); background: #2b2b2e; }
+  .pillar-chevrons {
+    position: absolute; left: 50px; right: 16px; top: 0; bottom: 0;
+    display: flex; align-items: center; gap: 4px; overflow: hidden;
+  }
+  .pillar-chevrons span {
+    color: #a9c0ec; font-weight: 800; font-size: 1.05rem; letter-spacing: -2px;
+    opacity: 0; animation: chevronFlow 1.8s ease-in-out infinite;
+  }
+  .pillar-chevrons span:nth-child(1) { animation-delay: 0s; }
+  .pillar-chevrons span:nth-child(2) { animation-delay: .2s; }
+  .pillar-chevrons span:nth-child(3) { animation-delay: .4s; }
+  @keyframes chevronFlow {
+    0% { opacity: 0; transform: translateX(-6px); }
+    35% { opacity: 1; transform: translateX(0); }
+    70% { opacity: 0; transform: translateX(10px); }
+    100% { opacity: 0; transform: translateX(10px); }
   }
 
-  section { padding: 72px 24px; }
-  .wrap { max-width: 1100px; margin: 0 auto; }
-
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 12px;
-    color: var(--navy);
-  }
-  .section-sub {
-    color: var(--muted);
-    max-width: 640px;
-    margin-bottom: 40px;
-  }
-
-  .about { background: #fff; }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-  }
-  .stat-row {
-    display: flex;
-    gap: 32px;
-    margin-top: 24px;
-  }
-  .stat { text-align: left; }
-  .stat b { display: block; font-size: 1.6rem; color: var(--navy); }
-  .stat span { color: var(--muted); font-size: 0.85rem; }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
-  .card {
-    background: #fff;
-    border: 1px solid #e7e5e0;
-    border-radius: 10px;
-    padding: 28px 22px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(15, 31, 61, 0.08);
-  }
-  .card .icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    background: var(--navy);
-    color: var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    margin-bottom: 16px;
-  }
-  .card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    color: var(--navy);
-  }
-  .card p {
-    color: var(--muted);
-    font-size: 0.92rem;
-  }
-
-  .contact { background: var(--navy); color: #fff; }
-  .contact h2 { color: #fff; }
-  .contact .section-sub { color: #b9c1d1; }
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .contact-item {
-    background: rgba(255,255,255,0.06);
-    border-radius: 10px;
-    padding: 22px;
-  }
-  .contact-item b { display: block; color: var(--gold); margin-bottom: 8px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
-  .contact-item a { color: #fff; text-decoration: none; }
-  .contact-item a:hover { color: var(--gold); }
-
-  footer {
-    background: #0b1730;
-    color: #8a93a6;
-    text-align: center;
-    padding: 24px;
-    font-size: 0.85rem;
-  }
-
-  @media (max-width: 800px) {
-    nav ul { display: none; }
+  @media (max-width: 900px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+    nav.links { display: none; }
+    .stats .wrap { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .stat-item { border-right: none; padding-bottom: 10px; }
     .about-grid { grid-template-columns: 1fr; }
-    .services-grid { grid-template-columns: 1fr 1fr; }
+    .about-grid .img-frame img { height: 300px; }
+    .feature-row { grid-template-columns: 1fr; margin-bottom: 60px; }
+    .feature-row.rev .media, .feature-row.rev .content { order: 0; }
+    .feature-row .media img { height: 280px; }
+    .process-grid { grid-template-columns: 1fr 1fr; }
+    .why-grid { grid-template-columns: 1fr; gap: 30px; }
     .contact-grid { grid-template-columns: 1fr; }
   }
-  @media (max-width: 480px) {
-    .services-grid { grid-template-columns: 1fr; }
+  @media (max-width: 520px) {
+    .process-grid { grid-template-columns: 1fr; }
+    .stats .wrap { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
@@ -190,90 +236,291 @@
 <header>
   <div class="nav">
     <div class="logo">VEFA <span>GLOBAL</span></div>
-    <nav>
+    <nav class="links">
       <ul>
-        <li><a href="#about">Hakkımızda</a></li>
-        <li><a href="#services">Hizmetler</a></li>
-        <li><a href="#contact">İletişim</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
+    <a href="#contact" class="btn btn-white">Book a Call</a>
   </div>
 </header>
 
 <section class="hero">
-  <div class="badge">New Delhi · Est. 2016</div>
-  <h1>Vefa Global Private Limited</h1>
-  <p>2016 yılında Yeni Delhi'de kurulan Vefa Global, hızla büyüyen iş dünyasında kurumlara kapsayıcı ve çeşitli bir iş ortamı sunarak çözümler üretir.</p>
+  <div class="wrap">
+    <span class="eyebrow">International Business Consulting · Est. 2016 · New Delhi, India</span>
+    <h1>A global consulting partner for businesses that move fast.</h1>
+    <p>Vefa Global Private Limited helps ambitious businesses source premium marble, build powerful social media presence, and scale on global marketplaces — with hands-on execution from strategy to results.</p>
+    <div class="cta-row">
+      <a href="#services" class="btn btn-solid">Explore Our Services</a>
+      <a href="#contact" class="btn btn-outline-dark">Book a Call</a>
+    </div>
+  </div>
 </section>
 
-<section class="about" id="about">
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Marble Import Consulting</span><span class="sep">✦</span>
+    <span>Social Media Management</span><span class="sep">✦</span>
+    <span>E-Commerce Consulting</span><span class="sep">✦</span>
+    <span>Marble Import Consulting</span><span class="sep">✦</span>
+    <span>Social Media Management</span><span class="sep">✦</span>
+    <span>E-Commerce Consulting</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat-item"><b>2016</b><span>Founded in New Delhi</span></div>
+    <div class="stat-item"><b>10+</b><span>Years of Experience</span></div>
+    <div class="stat-item"><b>3</b><span>Specialist Divisions</span></div>
+    <div class="stat-item"><b>Global</b><span>Sourcing &amp; Market Network</span></div>
+  </div>
+</div>
+
+<section id="about">
   <div class="wrap about-grid">
-    <div>
-      <h2>Hakkımızda</h2>
-      <p class="section-sub" style="margin-bottom:16px;">
-        Vefa Global, 2016 yılında Yeni Delhi'de kuruldu ve çeşitli, kapsayıcı bir iş ortamı inşa etmeye odaklanarak
-        hızla büyüyen iş dünyasındaki kurumlara çözümler sunmaktadır.
-      </p>
-      <div class="stat-row">
-        <div class="stat"><b>2016</b><span>Kuruluş Yılı</span></div>
-        <div class="stat"><b>4</b><span>Hizmet Alanı</span></div>
-        <div class="stat"><b>New Delhi</b><span>Merkez Ofis</span></div>
-      </div>
+    <div class="img-frame reveal">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Consultants collaborating in a meeting">
     </div>
-    <div>
+    <div class="reveal reveal-d2">
+      <span class="eyebrow-tag">About Vefa Global</span>
+      <h2>A consulting partner built for global business.</h2>
+      <p class="section-sub" style="margin-bottom: 16px;">
+        Founded in 2016 in New Delhi, Vefa Global Private Limited was created to help ambitious businesses navigate
+        complex, fast-moving markets. What began as a single consulting practice has grown into three specialist
+        divisions, each built around deep, hands-on expertise rather than generalist advice.
+      </p>
       <p class="section-sub">
-        Stratejik iş geliştirmeden şirket kuruluşuna, eğitim ve danışmanlıktan turizme kadar geniş bir
-        hizmet yelpazesiyle yatırımcılara ve kurumlara yol gösteriyoruz.
+        We work as an extension of your team — sourcing the right materials, building your digital presence, and
+        managing the marketplace accounts that drive your online sales.
       </p>
+      <ul class="about-list">
+        <li><span class="dash"></span> Specialized expertise across marble import, social media, and e-commerce</li>
+        <li><span class="dash"></span> Hands-on support from strategy through day-to-day execution</li>
+        <li><span class="dash"></span> A network of suppliers and partners spanning multiple markets</li>
+        <li><span class="dash"></span> Direct, senior-level attention on every engagement</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section id="services">
+<section class="pillars" id="services">
   <div class="wrap">
-    <h2>Hizmetlerimiz</h2>
-    <p class="section-sub">Kurumlara sunduğumuz temel hizmet alanları.</p>
-    <div class="services-grid">
-      <div class="card">
-        <div class="icon">01</div>
-        <h3>İş Geliştirme</h3>
-        <p>Stratejik analiz ile pazarlama ve satış uzmanlığını bir araya getirir.</p>
+    <div class="services-head reveal">
+      <span class="eyebrow-tag">What We Do</span>
+      <h2>Three disciplines. One hands-on approach.</h2>
+      <p class="section-sub">Focused areas of expertise, built to support your business from sourcing to sales.</p>
+    </div>
+    <div class="pillars-grid">
+      <a class="pillar-card reveal reveal-d1" href="#service-marble">
+        <h3>Marble Import</h3>
+        <span class="pillar-sub">Sourcing &amp; import consulting</span>
+        <div class="pillar-track">
+          <div class="pillar-arrow">&#8594;</div>
+          <div class="pillar-chevrons"><span>&raquo;</span><span>&raquo;</span><span>&raquo;</span></div>
+        </div>
+      </a>
+      <a class="pillar-card reveal reveal-d2" href="#service-social">
+        <h3>Social Media</h3>
+        <span class="pillar-sub">Management &amp; growth consulting</span>
+        <div class="pillar-track">
+          <div class="pillar-arrow">&#8594;</div>
+          <div class="pillar-chevrons"><span>&raquo;</span><span>&raquo;</span><span>&raquo;</span></div>
+        </div>
+      </a>
+      <a class="pillar-card reveal reveal-d3" href="#service-ecommerce">
+        <h3>E-Commerce</h3>
+        <span class="pillar-sub">Marketplace account consulting</span>
+        <div class="pillar-track">
+          <div class="pillar-arrow">&#8594;</div>
+          <div class="pillar-chevrons"><span>&raquo;</span><span>&raquo;</span><span>&raquo;</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <div class="feature-row reveal" id="service-marble">
+      <div class="media img-frame">
+        <img src="https://images.unsplash.com/photo-1558346648-9757f2fa4474?q=80&w=1000&auto=format&fit=crop" alt="Polished marble slabs">
       </div>
-      <div class="card">
-        <div class="icon">02</div>
-        <h3>Şirket Kuruluşu</h3>
-        <p>Yatırımcılara ve şirket sahiplerine kritik iş sorularında destek olur.</p>
+      <div class="content">
+        <span class="eyebrow-tag">01 · Marble Import Consulting</span>
+        <h3>Sourcing the right stone, without the guesswork.</h3>
+        <p class="desc">Importing marble is a business of relationships, quality control, and logistics. We guide architects, developers, and trading businesses through every step — from identifying reliable quarries and verifying slab quality, to navigating shipping, customs, and documentation.</p>
+        <ul class="cap-list">
+          <li><span class="dash"></span> Supplier identification &amp; quality verification</li>
+          <li><span class="dash"></span> Price negotiation and contract support</li>
+          <li><span class="dash"></span> Shipping, customs &amp; import documentation</li>
+          <li><span class="dash"></span> Quality control and on-site inspection support</li>
+        </ul>
+        <p class="platform-note"><b>Sourcing regions:</b> Italy, Turkey, the Middle East &amp; India</p>
       </div>
-      <div class="card">
-        <div class="icon">03</div>
-        <h3>Eğitim</h3>
-        <p>Ulusal ve uluslararası kaynakları kullanarak kurumsal ihtiyaçları analiz eden eğitim ve danışmanlık hizmetleri.</p>
+    </div>
+
+    <div class="feature-row rev reveal" id="service-social">
+      <div class="media img-frame">
+        <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=1000&auto=format&fit=crop" alt="Social media apps on a smartphone">
       </div>
-      <div class="card">
-        <div class="icon">04</div>
-        <h3>Turizm</h3>
-        <p>Uluslararası turizm geliştirme, satış operasyonları ve pazar genişletme.</p>
+      <div class="content">
+        <span class="eyebrow-tag">02 · Social Media Management</span>
+        <h3>Building brands that people actually follow.</h3>
+        <p class="desc">A strong social presence takes more than posting consistently — it takes strategy. We help brands define their voice, plan content that performs, and manage day-to-day activity across platforms.</p>
+        <ul class="cap-list">
+          <li><span class="dash"></span> Content strategy &amp; editorial calendars</li>
+          <li><span class="dash"></span> Day-to-day platform management</li>
+          <li><span class="dash"></span> Paid campaign planning &amp; performance tracking</li>
+          <li><span class="dash"></span> Community management &amp; audience growth</li>
+        </ul>
+        <p class="platform-note"><b>Platforms:</b> Instagram, Facebook, LinkedIn &amp; TikTok</p>
+      </div>
+    </div>
+
+    <div class="feature-row reveal" id="service-ecommerce">
+      <div class="media img-frame">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1000&auto=format&fit=crop" alt="Online shopping on a laptop">
+      </div>
+      <div class="content">
+        <span class="eyebrow-tag">03 · E-Commerce Consulting</span>
+        <h3>Marketplace accounts that sell consistently.</h3>
+        <p class="desc">Selling on a marketplace is easy — selling profitably and consistently is not. We manage and optimize seller accounts on Amazon, Flipkart, and Etsy, handling everything from listings to performance.</p>
+        <ul class="cap-list">
+          <li><span class="dash"></span> Account setup, health &amp; compliance management</li>
+          <li><span class="dash"></span> Listing optimization, pricing &amp; catalog strategy</li>
+          <li><span class="dash"></span> Advertising &amp; promotions to drive sales</li>
+          <li><span class="dash"></span> Order, review &amp; performance management</li>
+        </ul>
+        <p class="platform-note"><b>Marketplaces:</b> Amazon, Flipkart &amp; Etsy</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section id="process">
   <div class="wrap">
-    <h2>İletişim</h2>
-    <p class="section-sub">Bize aşağıdaki kanallardan ulaşabilirsiniz.</p>
+    <span class="eyebrow-tag reveal">How We Work</span>
+    <h2 class="reveal">A consistent process, applied to every engagement.</h2>
+    <p class="section-sub reveal">Whatever the division, every project follows the same disciplined approach.</p>
+    <div class="process-grid">
+      <div class="process-item reveal reveal-d1">
+        <div class="step-num">01</div>
+        <h3>Discover</h3>
+        <p>We start by understanding your business, goals, and current challenges in depth.</p>
+      </div>
+      <div class="process-item reveal reveal-d2">
+        <div class="step-num">02</div>
+        <h3>Strategize</h3>
+        <p>We build a clear, practical plan tailored to your market and objectives.</p>
+      </div>
+      <div class="process-item reveal reveal-d3">
+        <div class="step-num">03</div>
+        <h3>Execute</h3>
+        <p>We roll up our sleeves and manage execution alongside your team.</p>
+      </div>
+      <div class="process-item reveal reveal-d4">
+        <div class="step-num">04</div>
+        <h3>Grow</h3>
+        <p>We track results closely and refine the approach to keep momentum building.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="wrap">
+    <blockquote class="reveal">
+      "Whether it's a shipment of marble, a growing social audience, or a marketplace account on Amazon —
+      we treat every engagement with the same discipline and attention to detail."
+    </blockquote>
+    <cite>Vefa Global Private Limited</cite>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <span class="eyebrow-tag reveal">Why Vefa Global</span>
+    <h2 class="reveal">A partner that understands both sides of the market.</h2>
+    <p class="section-sub reveal">What sets our approach apart when working with clients and partners.</p>
+    <div class="why-grid">
+      <div class="why-item reveal reveal-d1">
+        <div class="num-mark">01</div>
+        <h3>Specialized Expertise</h3>
+        <p>Three distinct disciplines — marble import, social media, and e-commerce — each handled with dedicated, hands-on know-how.</p>
+      </div>
+      <div class="why-item reveal reveal-d2">
+        <div class="num-mark">02</div>
+        <h3>Local Roots, Global Reach</h3>
+        <p>Rooted in New Delhi since 2016, with supplier and market relationships that extend well beyond India.</p>
+      </div>
+      <div class="why-item reveal reveal-d3">
+        <div class="num-mark">03</div>
+        <h3>End-to-End Support</h3>
+        <p>From sourcing to strategy to execution, we stay involved through every stage of the project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <span class="eyebrow-tag reveal">FAQ</span>
+    <h2 class="reveal">Common questions</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>What does Vefa Global do?</summary>
+        <p>We're a specialist consulting firm helping businesses with marble import, social media management, and e-commerce marketplace growth — three focused disciplines, one hands-on approach.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you only work with clients in India?</summary>
+        <p>We're headquartered in New Delhi, but our sourcing network and marketplace expertise extend across international markets.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do you typically start an engagement?</summary>
+        <p>Every project starts with a discovery call to understand your goals, followed by a tailored strategy before we move into execution.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I get help with more than one service at a time?</summary>
+        <p>Yes — many clients combine services, for example building a marble supply chain while we manage their social presence and marketplace accounts in parallel.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I get started?</summary>
+        <p>Reach out through the contact section below or give us a call — we'll set up an initial conversation to see if we're the right fit.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="wrap">
+    <span class="eyebrow-tag" style="color:#9a9a9f;">Let's Talk</span>
+    <h2>Ready to build what's next?</h2>
+    <p>Tell us about your business, and we'll help you find the clearest path forward.</p>
+    <a href="#contact" class="btn btn-white">Contact Our Team</a>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow-tag reveal">Get In Touch</span>
+    <h2 class="reveal">Contact us</h2>
+    <p class="section-sub reveal">Reach out through any of the channels below — we'd love to hear about your project.</p>
     <div class="contact-grid">
-      <div class="contact-item">
-        <b>Adres</b>
-        1st Floor, A-83, Okhla Industrial Area, Okhla Phase II, New Delhi – 110020, India
+      <div class="contact-item reveal reveal-d1">
+        <b>Office Address</b>
+        <div>1st Floor, A-83, Okhla Industrial Area, Okhla Phase II, New Delhi – 110020, India</div>
       </div>
-      <div class="contact-item">
-        <b>Telefon</b>
+      <div class="contact-item reveal reveal-d2">
+        <b>Phone</b>
         <a href="tel:+9101140522449">+91-011-4052-2449</a><br>
         <a href="tel:+919717376667">+91-9717376667</a>
       </div>
-      <div class="contact-item">
-        <b>E-posta</b>
+      <div class="contact-item reveal reveal-d3">
+        <b>Email</b>
         <a href="mailto:info@vefaglobal.com">info@vefaglobal.com</a>
       </div>
     </div>
@@ -281,8 +528,49 @@
 </section>
 
 <footer>
-  &copy; 2026 Vefa Global Private Limited. Tüm hakları saklıdır.
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">VEFA <span>GLOBAL</span></div>
+        <p>International business consulting across marble import, social media management, and e-commerce — headquartered in New Delhi since 2016.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@vefaglobal.com">info@vefaglobal.com</a>
+          <a href="tel:+919717376667">+91-9717376667</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Vefa Global Private Limited. All rights reserved.</span>
+      <span>New Delhi, India</span>
+    </div>
+  </div>
 </footer>
 
+<script>
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+</script>
 </body>
 </html>
