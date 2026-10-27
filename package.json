@@ -1,0 +1,10 @@
+{
+  "name": "vefa-global-website",
+  "private": true,
+  "scripts": {
+    "css": "tailwindcss -i src/input.css -o assets/site.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-padding-top: 4.5rem; }
+}
+
+@layer utilities {
+  .shadow-soft { box-shadow: 0 4px 24px -4px rgba(0,0,0,0.05); }
+  .glass { background: rgba(255,255,255,0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); }
+  .glass-dark { background: rgba(0,0,0,0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+  .btn-3d { background: linear-gradient(180deg, theme('colors.coral') 0%, theme('colors.coral-deep') 100%); border: 1px solid theme('colors.coral-deep'); box-shadow: 0 2px 0 rgba(0,0,0,0.1); }
+}
