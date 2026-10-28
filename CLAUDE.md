@@ -32,5 +32,5 @@ DNS Cloudflare'de (yalnız DNS, proxy yok), yani sunucu tarafı kod / ülke bilg
 ## Sabitler
 - Resmi unvan: **Vefa Global Consultancy Pvt. Ltd.** (her yerde, schema dahil).
 - Konumlar: Yeni Delhi · İstanbul · Milano · Londra (EN: New Delhi · Istanbul · Milan · London).
-- İletişim formu Web3Forms → vefaindia@gmail.com; GA4 ve Meta Pixel yalnız çerez onayıyla yüklenir.
+- İletişim formu Web3Forms üzerinden şirket e-postasına gider; GA4 ve Meta Pixel yalnız çerez onayıyla yüklenir.
 - Bilinen: 320 px ekranda giriş başlığı sağdan kesiliyor (eskiden beri, düzeltilmedi).

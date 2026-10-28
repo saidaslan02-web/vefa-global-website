@@ -1,0 +1,12 @@
+# GitHub Pages (Jekyll): calisma dosyalari siteden yayinlanmasin. Site sayfalari etkilenmez (on bilgisiz HTML aynen kopyalanir).
+exclude:
+  - CLAUDE.md
+  - README.md
+  - DESIGN.md
+  - araclar
+  - onizleme
+  - src
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
