@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vefa Global · International Consulting and IT Operations</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="description" content="Vefa Global manages your import/export processes, global e-commerce accounts and digital IT presence end to end.">
+    
+    <!-- 1. Sosyal Medya ve WhatsApp Paylaşım Optimizasyonu (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vefaglobal.com/en/">
+    <meta property="og:title" content="Vefa Global · International Consulting and IT Operations">
+    <meta property="og:description" content="Vefa Global manages your import/export processes, global e-commerce accounts and digital IT presence end to end.">
+    <meta property="og:image" content="https://vefaglobal.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://vefaglobal.com/en/">
+    <link rel="alternate" hreflang="tr" href="https://vefaglobal.com/">
+    <link rel="alternate" hreflang="en" href="https://vefaglobal.com/en/">
+    <link rel="alternate" hreflang="x-default" href="https://vefaglobal.com/en/">
+    <!-- Dil: kayıtlı tercih > Türkiye saat dilimi ya da Türkçe tarayıcı > İngilizce. Yukarıdaki alternate linklerden SONRA gelmeli. -->
+    <script src="/assets/dil.js"></script>
+
+    <!-- 2. Google SEO Yapısal Veri (Schema.org - Şirket Kimliği Tanıtımı) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vefa Global Private Limited",
+      "url": "https://vefaglobal.com/",
+      "logo": "https://vefaglobal.com/vefa-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9999230202",
+        "contactType": "customer service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st Floor, A-83, Okhla Industrial Area, Okhla Phase II",
+        "addressLocality": "New Delhi",
+        "postalCode": "110020",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <!-- 3. Google Analytics (GA4) ve Meta Pixel: yalnızca çerez onayı verilince yüklenir (KVKK/GDPR) -->
+    <script>
+      function vefaIzlemeYukle() {
+        if (window.vefaIzlemeYuklendi) return;
+        window.vefaIzlemeYuklendi = true;
+
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-P0R9SS9CDT';
+        document.head.appendChild(ga);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        gtag('js', new Date());
+        gtag('config', 'G-P0R9SS9CDT');
+
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1393326119181260');
+        fbq('track', 'PageView');
+      }
+      try { if (localStorage.getItem('vefa-cerez') === 'kabul') vefaIzlemeYukle(); } catch (e) {}
+    </script>
+
+    <!-- Güvenlik Meta Etiketleri (Security Headers) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind derlenmiş çıktı: src/input.css değişince `npm run css` ile yeniden üret -->
+    <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body class="bg-cream font-sans text-ink antialiased">
+    
+    <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md">
+      <div class="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-6 lg:px-20">
+        <a href="#" class="flex items-center">
+          <img alt="Vefa Global" class="h-8 w-auto" src="/vefa-logo.png" width="110" height="32" onerror="this.style.display='none'">
+        </a>
+        <div class="flex items-center gap-3 md:gap-7">
+          <nav class="hidden items-center gap-6 text-[15px] md:flex text-ink-soft">
+             <a href="#hizmetler" class="hover:text-coral transition-colors">Services</a>
+             <a href="#nasil" class="hover:text-coral transition-colors">Process</a>
+             <a href="#nedenbiz" class="hover:text-coral transition-colors">About</a>
+          </nav>
+          <a href="/" hreflang="tr" lang="tr" data-dil="tr" class="inline-flex items-center gap-1.5 rounded-full border border-hairline bg-white/70 px-3 py-2.5 text-[14px] font-semibold text-ink backdrop-blur transition-colors hover:bg-white hover:text-coral-deep md:py-3" aria-label="Türkçe sayfaya geç" title="Türkçe">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm88,104a87.61,87.61,0,0,1-3.33,24H174.16a157.44,157.44,0,0,0,0-48h38.51A87.61,87.61,0,0,1,216,128ZM102,168H154a115.11,115.11,0,0,1-26,45A115.27,115.27,0,0,1,102,168Zm-3.9-16a140.84,140.84,0,0,1,0-48h59.88a140.84,140.84,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.84a157.44,157.44,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154,88H102a115.11,115.11,0,0,1,26-45A115.27,115.27,0,0,1,154,88Zm52.33,0H170.71a135.28,135.28,0,0,0-22.3-45.6A88.29,88.29,0,0,1,206.37,88ZM107.59,42.4A135.28,135.28,0,0,0,85.29,88H49.63A88.29,88.29,0,0,1,107.59,42.4ZM49.63,168H85.29a135.28,135.28,0,0,0,22.3,45.6A88.29,88.29,0,0,1,49.63,168Zm98.78,45.6a135.28,135.28,0,0,0,22.3-45.6h35.66A88.29,88.29,0,0,1,148.41,213.6Z"></path></svg>
+            <span>TR</span>
+          </a>
+          <a href="#iletisim" class="group hidden sm:inline-flex cursor-pointer items-center gap-2.5 rounded-full font-semibold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] border border-hairline bg-white/70 text-ink backdrop-blur hover:bg-white px-4 py-2.5 text-[14px] md:px-5 md:py-3 md:text-[15px]">
+            Let's talk
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-[1.05em] transition-transform duration-200 group-hover:translate-x-0.5"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>
+          </a>
+          <button type="button" id="menu-dugme" class="grid size-10 place-items-center rounded-full border border-hairline bg-white/70 text-ink md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobil-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobil-menu" class="hidden border-t border-hairline bg-white px-6 py-2 text-[17px] text-ink-soft md:hidden">
+        <a href="#hizmetler" class="block py-3">Services</a>
+        <a href="#nasil" class="block border-t border-hairline py-3">Process</a>
+        <a href="#nedenbiz" class="block border-t border-hairline py-3">About</a>
+        <a href="#iletisim" class="block border-t border-hairline py-3 font-semibold text-coral-deep">Contact</a>
+      </nav>
+      <div class="absolute bottom-0 left-0 h-[2px] w-full origin-left bg-coral"></div>
+    </header>
+
+    <main id="main">
+      <section class="relative flex min-h-[calc(100dvh-64px)] flex-col overflow-hidden">
+        <div class="absolute inset-x-0 top-[-200px] h-[640px] bg-[radial-gradient(52%_100%_at_50%_0%,rgba(249,115,22,0.14),transparent_70%)]"></div>
+        <div class="absolute right-[-180px] bottom-[-100px] h-[420px] w-[420px] rounded-full bg-[radial-gradient(closest-side,rgba(249,115,22,0.1),transparent_70%)]"></div>
+        
+        <div class="relative mx-auto grid w-full max-w-[1400px] flex-1 items-center gap-12 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-20">
+          <div>
+            <h1 class="text-[clamp(2.6rem,5.6vw,4.9rem)] leading-[1.02] font-bold tracking-[-0.038em] text-ink">
+              Your international trade and IT operations,<br>
+              <span class="text-coral-deep sm:whitespace-nowrap">set up turnkey.</span>
+            </h1>
+            <p class="mt-9 max-w-[44ch] text-[clamp(1.15rem,1.7vw,1.4rem)] leading-[1.55] text-ink-soft">
+              From your supply chain to setting up a company in India, from global e-commerce to your IT infrastructure, we take the whole operational load off your shoulders.
+            </p>
+            <div class="mt-10">
+              <a href="#iletisim" class="group inline-flex cursor-pointer items-center gap-2.5 rounded-full font-semibold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] btn-3d text-white hover:brightness-[1.06] px-8 py-4 text-lg">
+                Tell us about your project
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-[1.05em] transition-transform duration-200 group-hover:translate-x-0.5"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <div class="relative mx-auto w-full max-w-[520px] lg:mr-0" style="transform: perspective(1200px) rotateY(-16deg) rotateX(8deg) rotateZ(-2deg); transform-style: preserve-3d; transition: transform 0.5s ease-out;" onmouseenter="this.style.transform='perspective(1200px) rotateY(0deg) rotateX(0deg) rotateZ(0deg)'" onmouseleave="this.style.transform='perspective(1200px) rotateY(-16deg) rotateX(8deg) rotateZ(-2deg)'">
+              <div class="absolute inset-0 translate-x-6 translate-y-6 rounded-2xl border border-white/70 bg-white/40 shadow-xl" style="transform: translateZ(-30px);"></div>
+              <div class="glass shadow-2xl rounded-2xl relative z-10" style="transform: translateZ(10px);">
+                <div class="flex items-center justify-between border-b border-hairline px-5 py-3.5">
+                  <div class="flex items-center gap-2.5">
+                    <span class="grid size-7 place-items-center rounded-lg bg-ink text-[12px] font-semibold text-cream">V</span>
+                    <span class="text-[15px] font-semibold text-ink">Departments</span>
+                  </div>
+                  <span class="flex items-center gap-1.5 font-mono text-[11.5px] text-muted"><span class="size-1.5 rounded-full bg-coral"></span>7 departments active</span>
+                </div>
+                <ul class="divide-y divide-hairline">
+                  <li class="flex items-center gap-3.5 px-5 py-3">
+                    <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-coral-tint text-coral-deep">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3.5"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg>
+                    </span>
+                    <div class="min-w-0 flex-1 leading-tight">
+                      <div class="truncate text-[14px] font-semibold text-ink">Supply Chain</div>
+                      <div class="truncate text-[12.5px] text-muted">global manufacturers sourced</div>
+                    </div>
+                    <span class="font-mono text-[11px] text-coral-deep">active</span>
+                  </li>
+                  <li class="flex items-center gap-3.5 px-5 py-3">
+                    <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-coral-tint text-coral-deep">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3.5"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg>
+                    </span>
+                    <div class="min-w-0 flex-1 leading-tight">
+                      <div class="truncate text-[14px] font-semibold text-ink">Customs & Logistics</div>
+                      <div class="truncate text-[12.5px] text-muted">export documents approved</div>
+                    </div>
+                    <span class="font-mono text-[11px] text-coral-deep">active</span>
+                  </li>
+                  <li class="flex items-center gap-3.5 px-5 py-3">
+                    <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-coral-tint text-coral-deep">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3.5"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg>
+                    </span>
+                    <div class="min-w-0 flex-1 leading-tight">
+                      <div class="truncate text-[14px] font-semibold text-ink">Amazon Marketplace</div>
+                      <div class="truncate text-[12.5px] text-muted">listings optimized</div>
+                    </div>
+                    <span class="font-mono text-[11px] text-coral-deep">active</span>
+                  </li>
+                  <li class="flex items-center gap-3.5 px-5 py-3">
+                    <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-coral-tint text-coral-deep">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3.5"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg>
+                    </span>
+                    <div class="min-w-0 flex-1 leading-tight">
+                      <div class="truncate text-[14px] font-semibold text-ink">Performance Ads</div>
+                      <div class="truncate text-[12.5px] text-muted">PPC campaign live</div>
+                    </div>
+                    <span class="font-mono text-[11px] text-coral-deep">active</span>
+                  </li>
+                  <li class="flex items-center gap-3.5 px-5 py-3">
+                    <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-coral-tint text-coral-deep">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3.5"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg>
+                    </span>
+                    <div class="min-w-0 flex-1 leading-tight">
+                      <div class="truncate text-[14px] font-semibold text-ink">Social Media</div>
+                      <div class="truncate text-[12.5px] text-muted">weekly posts published</div>
+                    </div>
+                    <span class="font-mono text-[11px] text-coral-deep">active</span>
+                  </li>
+                  <li class="flex items-center gap-3.5 px-5 py-3">
+                    <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-coral-tint text-coral-deep">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3.5"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg>
+                    </span>
+                    <div class="min-w-0 flex-1 leading-tight">
+                      <div class="truncate text-[14px] font-semibold text-ink">IT & Infrastructure</div>
+                      <div class="truncate text-[12.5px] text-muted">system integration complete</div>
+                    </div>
+                    <span class="font-mono text-[11px] text-coral-deep">active</span>
+                  </li>
+                  <li class="flex items-center gap-3.5 px-5 py-3">
+                    <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-coral-tint text-coral-deep">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3.5"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg>
+                    </span>
+                    <div class="min-w-0 flex-1 leading-tight">
+                      <div class="truncate text-[14px] font-semibold text-ink">Company Setup</div>
+                      <div class="truncate text-[12.5px] text-muted">operations launched in India</div>
+                    </div>
+                    <span class="font-mono text-[11px] text-coral-deep">active</span>
+                  </li>
+                </ul>
+                <div class="flex items-center justify-between border-t border-hairline bg-cream-2/70 px-5 py-3 font-mono text-[11.5px] text-muted">
+                  <span>today</span>
+                  <span>everything under your control</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hizmetler" class="bg-white">
+        <div class="mx-auto max-w-[1400px] px-6 py-20 md:py-28 lg:px-20">
+          <div>
+            <p class="font-mono text-[13px] text-muted"><span class="text-coral">01</span> · what we do</p>
+            <h2 class="mt-5 max-w-[18ch] text-[clamp(2.2rem,5vw,4rem)] leading-[1.04] font-bold tracking-[-0.035em] text-ink">Services that take the load off you in global markets.</h2>
+          </div>
+          
+          <div class="mt-12 grid gap-4 md:mt-16 md:grid-cols-2 lg:grid-cols-4">
+            
+            <div class="glass shadow-soft h-full rounded-2xl p-6 bg-cream">
+              <p class="font-mono text-[12.5px] text-muted">service / <span class="text-coral">01</span></p>
+              <h3 class="mt-3 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">Supply Chain & Logistics</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">From finding the right manufacturer to customs clearance, we run your import-export operation end to end, safely.</p>
+            </div>
+      
+            <div class="glass shadow-soft h-full rounded-2xl p-6 bg-cream">
+              <p class="font-mono text-[12.5px] text-muted">service / <span class="text-coral">02</span></p>
+              <h3 class="mt-3 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">Global E-Commerce Management</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">We open your seller accounts on Amazon, Flipkart and Etsy and grow your market share with algorithm-friendly listings.</p>
+            </div>
+      
+            <div class="glass shadow-soft h-full rounded-2xl p-6 bg-cream">
+              <p class="font-mono text-[12.5px] text-muted">service / <span class="text-coral">03</span></p>
+              <h3 class="mt-3 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">Performance Marketing (PPC)</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">We build campaigns that reach the right audience, grow your sales and get the most out of your ad budget.</p>
+            </div>
+      
+            <div class="glass shadow-soft h-full rounded-2xl p-6 bg-cream">
+              <p class="font-mono text-[12.5px] text-muted">service / <span class="text-coral">04</span></p>
+              <h3 class="mt-3 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">IT & Integration</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">We set up the software and IT infrastructure your business needs and automate your operations.</p>
+            </div>
+      
+            <div class="glass shadow-soft h-full rounded-2xl p-6 bg-cream">
+              <p class="font-mono text-[12.5px] text-muted">service / <span class="text-coral">05</span></p>
+              <h3 class="mt-3 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">Social Media Management</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">We create content strategies that build your B2B brand authority and position your digital identity globally.</p>
+            </div>
+      
+            <div class="glass shadow-soft h-full rounded-2xl p-6 bg-cream">
+              <p class="font-mono text-[12.5px] text-muted">service / <span class="text-coral">06</span></p>
+              <h3 class="mt-3 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">Quality Control</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">We provide on-site inspection and quality assurance in sectors such as marble, textiles and consumer goods.</p>
+            </div>
+      
+            <div class="glass shadow-soft h-full rounded-2xl p-6 bg-cream">
+              <p class="font-mono text-[12.5px] text-muted">service / <span class="text-coral">07</span></p>
+              <h3 class="mt-3 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">SEO & Optimization</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">We optimize your listings and content so you are more visible on marketplaces and search engines.</p>
+            </div>
+      
+            <a href="#iletisim" class="group flex h-full flex-col rounded-2xl border border-coral/40 bg-coral-tint p-6 shadow-soft transition-transform duration-200 hover:-translate-y-1">
+              <p class="font-mono text-[12.5px] text-coral-deep">service / <span class="text-coral">08</span></p>
+              <h3 class="mt-3 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">Have something else in mind?</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-ink-soft">If your business doesn't fit these, we design the operation around you. Tell us what you need and let's talk about what we can do.</p>
+              <span class="mt-auto inline-flex items-center gap-1.5 pt-5 text-[15px] font-semibold text-coral-deep">
+                Let's talk
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-[1em] transition-transform duration-200 group-hover:translate-x-0.5"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>
+              </span>
+            </a>
+      
+          </div>
+          
+          <p class="mt-10 max-w-[72ch] text-[clamp(1.05rem,1.5vw,1.25rem)] leading-[1.6] text-ink-soft">
+            Rather than one-off services, Vefa Global takes on the whole process. We don't just hand over a strategy; we are inside the operation at every stage, from logistics to digital transformation.
+          </p>
+        </div>
+      </section>
+
+      <div class="border-y border-hairline bg-cream-3">
+        <div class="mx-auto max-w-[1400px] px-6 py-20 md:py-28 lg:px-20">
+          <div>
+            <p class="font-mono text-[13px] text-muted"><span class="text-coral">02</span> · who it's for</p>
+            <h2 class="mt-5 max-w-[18ch] text-[clamp(2.2rem,5vw,4rem)] leading-[1.04] font-bold tracking-[-0.035em] text-ink">You focus on your business, we run the operation.</h2>
+          </div>
+          <div class="mt-12 grid gap-4 md:mt-16 md:grid-cols-3">
+            <div class="flex flex-col rounded-2xl border border-hairline bg-white p-6 shadow-soft md:p-8">
+              <span class="grid size-11 place-items-center rounded-xl bg-coral-tint text-coral-deep">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm96,129.57V133.82L168,116.3V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"></path></svg>
+              </span>
+              <h3 class="mt-5 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">Manufacturers and exporters</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">Companies that want to source products from India or sell into the Indian market. We handle sourcing, quality control, customs and logistics in one place.</p>
+            </div>
+            <div class="flex flex-col rounded-2xl border border-hairline bg-white p-6 shadow-soft md:p-8">
+              <span class="grid size-11 place-items-center rounded-xl bg-coral-tint text-coral-deep">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z"></path></svg>
+              </span>
+              <h3 class="mt-5 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">Brands going online</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">Brands that want to sell on Amazon, Flipkart or Etsy. We run your store, from account setup to listings, ads and social media.</p>
+            </div>
+            <div class="flex flex-col rounded-2xl border border-hairline bg-white p-6 shadow-soft md:p-8">
+              <span class="grid size-11 place-items-center rounded-xl bg-coral-tint text-coral-deep">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><path d="M248,208H232V96a8,8,0,0,0,0-16H184V48a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16V208H24a8,8,0,0,0,0,16H248a8,8,0,0,0,0-16ZM216,96V208H184V96ZM56,48H168V208H144V160a8,8,0,0,0-8-8H88a8,8,0,0,0-8,8v48H56Zm72,160H96V168h32ZM72,80a8,8,0,0,1,8-8H96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,80Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H128A8,8,0,0,1,120,80ZM72,120a8,8,0,0,1,8-8H96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,120Zm48,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H128A8,8,0,0,1,120,120Z"></path></svg>
+              </span>
+              <h3 class="mt-5 text-[clamp(1.15rem,1.5vw,1.3rem)] font-semibold tracking-[-0.01em] text-ink">Investing in India</h3>
+              <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">Entrepreneurs who want to set up a company and start operations in India. We are with you on the ground, from incorporation to IT infrastructure.</p>
+            </div>
+          </div>
+          <a href="#iletisim" class="group mt-10 inline-flex items-center gap-1.5 text-[15px] font-semibold text-coral-deep transition-colors hover:text-coral">
+            Let's find the right model for you
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-[1em] transition-transform duration-200 group-hover:translate-x-0.5"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <section id="nasil" class="bg-white">
+        <div class="mx-auto grid max-w-[1400px] gap-14 px-6 py-20 md:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-20">
+          <div>
+            <div class="lg:sticky lg:top-28">
+              <p class="font-mono text-[13px] text-muted"><span class="text-coral">03</span> · how it works</p>
+              <h2 class="mt-5 max-w-[16ch] text-[clamp(2.2rem,5vw,4rem)] leading-[1.04] font-bold tracking-[-0.035em] text-ink">Operational excellence in four steps.</h2>
+            </div>
+          </div>
+          <ol class="relative">
+            <div class="absolute top-2 bottom-2 left-[7px] w-px bg-hairline"></div>
+            
+            <li class="relative pb-16 pl-12 last:pb-0 md:pl-16">
+              <span class="absolute top-2 left-0 z-10 grid size-[15px] place-items-center rounded-full border-2 border-coral bg-cream"></span>
+              <div>
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <span class="font-mono text-[13px] text-muted">step / <span class="text-coral">01</span></span>
+                  <h3 class="text-[clamp(1.4rem,2.3vw,1.9rem)] font-semibold tracking-[-0.01em] text-ink">Discovery & Analysis</h3>
+                  <span class="grid size-5 place-items-center rounded-full bg-coral-tint"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3 text-coral-deep"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg></span>
+                </div>
+                <p class="mt-3 max-w-[52ch] text-lg leading-[1.65] text-muted">In our first meeting we analyze your current supply chain or digital assets and pinpoint the bottlenecks.</p>
+              </div>
+            </li>
+            
+            <li class="relative pb-16 pl-12 last:pb-0 md:pl-16">
+              <span class="absolute top-2 left-0 z-10 grid size-[15px] place-items-center rounded-full border-2 border-coral bg-cream"></span>
+              <div>
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <span class="font-mono text-[13px] text-muted">step / <span class="text-coral">02</span></span>
+                  <h3 class="text-[clamp(1.4rem,2.3vw,1.9rem)] font-semibold tracking-[-0.01em] text-ink">Strategy</h3>
+                  <span class="grid size-5 place-items-center rounded-full bg-coral-tint"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3 text-coral-deep"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg></span>
+                </div>
+                <p class="mt-3 max-w-[52ch] text-lg leading-[1.65] text-muted">We draw up a clear, workable operations plan that fits your company's goals.</p>
+              </div>
+            </li>
+      
+            <li class="relative pb-16 pl-12 last:pb-0 md:pl-16">
+              <span class="absolute top-2 left-0 z-10 grid size-[15px] place-items-center rounded-full border-2 border-coral bg-cream"></span>
+              <div>
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <span class="font-mono text-[13px] text-muted">step / <span class="text-coral">03</span></span>
+                  <h3 class="text-[clamp(1.4rem,2.3vw,1.9rem)] font-semibold tracking-[-0.01em] text-ink">Execution</h3>
+                  <span class="grid size-5 place-items-center rounded-full bg-coral-tint"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3 text-coral-deep"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg></span>
+                </div>
+                <p class="mt-3 max-w-[52ch] text-lg leading-[1.65] text-muted">From supplier negotiations to running your e-commerce ad campaigns, we roll up our sleeves and get to work.</p>
+              </div>
+            </li>
+      
+            <li class="relative pb-16 pl-12 last:pb-0 md:pl-16">
+              <span class="absolute top-2 left-0 z-10 grid size-[15px] place-items-center rounded-full border-2 border-coral bg-cream"></span>
+              <div>
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <span class="font-mono text-[13px] text-muted">step / <span class="text-coral">04</span></span>
+                  <h3 class="text-[clamp(1.4rem,2.3vw,1.9rem)] font-semibold tracking-[-0.01em] text-ink">Growth & Reporting</h3>
+                  <span class="grid size-5 place-items-center rounded-full bg-coral-tint"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-3 text-coral-deep"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></svg></span>
+                </div>
+                <p class="mt-3 max-w-[52ch] text-lg leading-[1.65] text-muted">We report results regularly and keep optimizing the strategy based on the data.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <div id="nedenbiz" class="relative overflow-hidden bg-espresso">
+        <div class="absolute inset-x-0 top-[-160px] h-[480px] bg-[radial-gradient(50%_100%_at_50%_0%,rgba(249,115,22,0.15),transparent_70%)]"></div>
+        <div class="relative mx-auto grid max-w-[1400px] items-center gap-16 px-6 py-20 md:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24 lg:px-20">
+          <div>
+            <div>
+              <p class="font-mono text-[13px] text-dark-muted"><span class="text-coral">04</span> · why vefa</p>
+              <h2 class="mt-5 text-[clamp(2.2rem,5vw,4rem)] leading-[1.04] font-bold tracking-[-0.035em] text-dark-text">Why Vefa Global?</h2>
+            </div>
+            <div class="mt-10 max-w-[62ch] space-y-6 text-[clamp(1.02rem,1.3vw,1.15rem)] leading-[1.7] text-dark-muted">
+              <p class="text-[clamp(1.25rem,1.9vw,1.6rem)] leading-[1.4] font-bold tracking-[-0.015em] text-dark-text">Since 2016, we have been turning business opportunities that reach from India to the world into <span class="text-coral">tangible results</span>.</p>
+              <p>As <strong class="font-semibold text-dark-text">Vefa Global Consultancy Pvt. Ltd.</strong>, based in New Delhi, we provide companies with <strong class="font-semibold text-dark-text">end-to-end business support</strong> in:</p>
+              <ul class="flex flex-wrap gap-2 text-[13.5px] font-medium text-dark-text">
+                <li class="rounded-full border border-coral/40 bg-coral/10 px-3.5 py-1.5">International trade</li>
+                <li class="rounded-full border border-coral/40 bg-coral/10 px-3.5 py-1.5">Import and export</li>
+                <li class="rounded-full border border-coral/40 bg-coral/10 px-3.5 py-1.5">Business development</li>
+                <li class="rounded-full border border-coral/40 bg-coral/10 px-3.5 py-1.5">Market research</li>
+                <li class="rounded-full border border-coral/40 bg-coral/10 px-3.5 py-1.5">IT solutions</li>
+              </ul>
+              <p>By combining our business connections across markets, <strong class="font-semibold text-dark-text">India and Turkey</strong> above all, with local market knowledge and field experience, we help businesses <strong class="font-semibold text-dark-text">enter new markets</strong>, <strong class="font-semibold text-dark-text">reach the right partners</strong> and grow their commercial opportunities.</p>
+              <p>For us, consulting is not limited to giving advice. From supplier research to identifying partners, from commercial negotiations to operational coordination, from documentation to building digital processes, we <strong class="font-semibold text-dark-text">take an active role</strong> at every stage the project needs.</p>
+              <p class="border-l-[3px] border-coral py-1 pl-5 text-[clamp(1.1rem,1.5vw,1.3rem)] leading-[1.5] font-semibold text-dark-text">What sets us apart is that we don't just tell you what needs to be done; <span class="text-coral">we also take responsibility for getting it done.</span></p>
+              <p>Knowing that every business has different goals, resources and needs, we develop <strong class="font-semibold text-dark-text">tailored approaches</strong> instead of standard solutions. Our aim is not only to create new opportunities, but to help them grow into <strong class="font-semibold text-dark-text">sustainable business relationships and long-term commercial value</strong>.</p>
+              <p class="border-t border-dark-line pt-6 text-[clamp(1.05rem,1.4vw,1.2rem)] font-bold text-dark-text">Vefa Global: <span class="text-coral">local expertise, international connections and a hands-on business partnership.</span></p>
+            </div>
+          </div>
+          <div class="w-full max-w-[320px] max-lg:mx-auto md:max-w-[400px] lg:justify-self-end">
+            <figure>
+              <div class="glass-dark relative aspect-[4/5] overflow-hidden rounded-2xl">
+                <picture>
+                  <source srcset="/office-environment.webp" type="image/webp">
+                  <img alt="Vefa Global office" class="absolute inset-0 size-full object-cover" src="/office-environment.jpg" width="800" height="1071" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <figcaption class="mt-5 border-t border-dark-line pt-4">
+                <div class="flex items-baseline justify-between">
+                  <span class="text-lg font-semibold text-dark-text">International Network</span>
+                  <span class="text-[15px] text-dark-muted">Est. 2016</span>
+                </div>
+                <div class="mt-3 flex gap-6 font-mono text-[12.5px]">
+                  <span class="text-dark-muted">New Delhi · Istanbul · Milan</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <section id="iletisim" class="relative overflow-hidden border-t border-hairline bg-cream-3">
+        <div class="absolute inset-x-0 bottom-[-260px] h-[560px] bg-[radial-gradient(55%_100%_at_50%_100%,rgba(249,115,22,0.1),transparent_70%)]"></div>
+        <div class="relative mx-auto max-w-[1400px] px-6 py-28 md:py-36 lg:px-20">
+          <div>
+            <p class="font-mono text-[13px] text-muted sm:text-sm"><span class="text-coral">&gt;</span> next up: <span class="font-medium text-coral-deep">yours</span></p>
+          </div>
+          <div>
+            <h2 class="mt-6 text-[clamp(2.6rem,7.4vw,6.4rem)] leading-[1.0] font-bold tracking-[-0.04em] text-ink">
+              Claim your place<br>
+              <span class="text-coral-deep">in global growth.</span>
+            </h2>
+            <p class="mt-4 text-[clamp(1.2rem,2vw,1.6rem)] font-semibold tracking-[-0.01em] text-coral-deep">Tell us about your business, we'll get back to you.</p>
+          </div>
+          <div>
+            <div class="mt-12">
+              <p class="max-w-[44ch] text-[clamp(1.15rem,1.6vw,1.35rem)] leading-[1.6] text-muted">Fill in the form to see how we can take your operations further. Our team will get back to you within 24 hours.</p>
+              <div class="mt-10">
+                <form id="iletisim-formu" class="grid max-w-[560px] gap-4" action="https://api.web3forms.com/submit" method="POST">
+                  <input type="hidden" name="access_key" value="9747427f-4522-474e-8aa8-cd6ef1dbaadf">
+                  <input type="hidden" name="subject" value="vefaglobal.com — yeni iletişim formu (İngilizce sayfa)">
+                  <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+                  <label class="grid gap-1.5">
+                    <span class="text-[14px] font-medium text-ink-soft">Your name</span>
+                    <input required class="w-full rounded-xl border border-hairline bg-white/80 px-4 py-3.5 text-[17px] text-ink placeholder:text-muted/70 focus:border-coral focus:outline-none" name="ad">
+                  </label>
+                  <label class="grid gap-1.5">
+                    <span class="text-[14px] font-medium text-ink-soft">Email or phone</span>
+                    <input required class="w-full rounded-xl border border-hairline bg-white/80 px-4 py-3.5 text-[17px] text-ink placeholder:text-muted/70 focus:border-coral focus:outline-none" name="iletisim">
+                  </label>
+                  <label class="grid gap-1.5">
+                    <span class="text-[14px] font-medium text-ink-soft">What is your business, and where do you need support?</span>
+                    <textarea required name="mesaj" rows="4" class="w-full rounded-xl border border-hairline bg-white/80 px-4 py-3.5 text-[17px] text-ink placeholder:text-muted/70 focus:border-coral focus:outline-none resize-y"></textarea>
+                  </label>
+                  <button type="submit" class="btn-3d group mt-2 inline-flex w-full items-center justify-center gap-3 rounded-full px-8 py-5 text-[clamp(1.05rem,1.6vw,1.25rem)] font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:brightness-[1.06] sm:w-auto sm:justify-self-start sm:px-10">
+                    Send
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-[1.05em] transition-transform duration-200 group-hover:translate-x-0.5"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>
+                  </button>
+                  <p id="form-durum" class="hidden text-[16px] font-medium" role="status" aria-live="polite"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-hairline bg-cream-3">
+      <div class="mx-auto max-w-[1400px] px-6 py-12 lg:px-20">
+        <div class="flex flex-wrap items-start justify-between gap-x-10 gap-y-8">
+          <div>
+            <img alt="Vefa Global" class="h-6 w-auto" src="/vefa-logo.png" width="82" height="24" loading="lazy" onerror="this.style.display='none'">
+            <div class="mt-5 flex flex-wrap items-center gap-3">
+              <a href="#iletisim" class="btn-3d inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[14px] font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:brightness-[1.06]">
+                Tell us about your business
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-[1em]"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>
+              </a>
+            </div>
+          </div>
+          <div class="text-[13px] leading-relaxed flex flex-col gap-3">
+            <a href="mailto:info@vefaglobal.com" class="inline-flex items-center gap-2 font-medium text-ink-soft transition-colors hover:text-coral">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-4"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a16,16,0,0,0,21.82,0L227,74.19V192Z"></path></svg>
+              info@vefaglobal.com
+            </a>
+            <nav class="flex flex-col gap-2.5 text-muted">
+              <a href="tel:+919999230202" class="inline-flex items-center gap-2 transition-colors hover:text-coral">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-4"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.41-38.83-38.83l20.78-24.34a8.12,8.12,0,0,0,.56-.75,16,16,0,0,0,1.4-15.17l-.06-.13L97.54,33.63A16,16,0,0,0,82,24h0A16,16,0,0,0,66,38.3C60.27,61.21,57,94.27,84.46,121.78,111.91,149.24,145,146.05,167.75,140.35h0a16,16,0,0,0,14.3-16ZM66,40c0-.12.06-.23.11-.34A42.11,42.11,0,0,1,80.79,27.1a3.84,3.84,0,0,1,1,.11h0a4,4,0,0,1,2.83,2.69l21.26,47.37a4,4,0,0,1-.39,3.85c-.09.11-.17.21-.28.34L81.25,109.52a8,8,0,0,0-1.87,6.8c8.35,33.12,33.78,58.55,66.9,66.9a8,8,0,0,0,6.8-1.87l28-24c.12-.11.23-.2.34-.28a4,4,0,0,1,3.85-.39l47.37,21.26a4,4,0,0,1,2.69,2.83h0a3.84,3.84,0,0,1,.11,1A42.11,42.11,0,0,1,166,220.1C145.41,225.26,115,228,89.5,202.51S53,138.87,48,118.25Z"></path></svg>
+                +91-9999230202
+              </a>
+              <a href="https://www.linkedin.com/company/107627772/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 transition-colors hover:text-coral">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="size-4"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM88,76a12,12,0,1,1-12-12A12,12,0,0,1,88,76Z"></path></svg>
+                LinkedIn
+              </a>
+            </nav>
+          </div>
+          <div class="text-[13px] leading-relaxed text-muted">
+            <span class="inline-flex items-center gap-2.5 font-medium text-ink-soft">Vefa Global Private Limited</span>
+            <p class="mt-2">Est. 2016</p>
+            <p class="mt-1 max-w-[36ch]">1st Floor, A-83, Okhla Industrial Area, Okhla Phase II, New Delhi – 110020, India</p>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-wrap justify-between gap-3 border-t border-hairline pt-5 text-[13px] text-muted">
+          <span>© 2026 Vefa Global</span>
+          <a href="/en/privacy.html" class="transition-colors hover:text-coral">Privacy & Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919999230202" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center justify-center size-14 rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 hover:shadow-xl" aria-label="Contact us on WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+        <path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23-7.7,11.55a8,8,0,0,0-.88,7.85,56.61,56.61,0,0,0,26.43,26.43,8,8,0,0,0,7.85-.88l11.55-7.7,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L44,214.69l11.17-33.43a8,8,0,0,0-.67-6.54A88,88,0,1,1,128,216Z"></path>
+      </svg>
+    </a>
+
+    <!-- Çerez onayı -->
+    <div id="cerez-bandi" class="fixed inset-x-4 bottom-4 z-[60] hidden max-w-[560px] rounded-2xl border border-hairline bg-white p-5 shadow-2xl sm:left-6 sm:right-auto" role="dialog" aria-label="Cookie preference">
+      <p class="text-[14.5px] leading-[1.55] text-ink-soft">We'd like to use Google Analytics and Meta cookies to improve our site and measure our ads. Details are in our <a href="/en/privacy.html" class="font-medium text-coral-deep underline">Privacy Policy</a>.</p>
+      <div class="mt-4 flex gap-3">
+        <button type="button" id="cerez-kabul" class="btn-3d rounded-full px-5 py-2.5 text-[14px] font-semibold text-white">Accept</button>
+        <button type="button" id="cerez-red" class="rounded-full border border-hairline bg-white px-5 py-2.5 text-[14px] font-semibold text-ink hover:bg-cream-3">Decline</button>
+      </div>
+    </div>
+
+    <script>
+      // Çerez onayı: tercih yoksa bandı göster
+      (function () {
+        var bant = document.getElementById('cerez-bandi');
+        var tercih = null;
+        try { tercih = localStorage.getItem('vefa-cerez'); } catch (e) {}
+        if (!tercih) bant.classList.remove('hidden');
+        function kaydet(deger) {
+          try { localStorage.setItem('vefa-cerez', deger); } catch (e) {}
+          bant.classList.add('hidden');
+          if (deger === 'kabul') vefaIzlemeYukle();
+        }
+        document.getElementById('cerez-kabul').addEventListener('click', function () { kaydet('kabul'); });
+        document.getElementById('cerez-red').addEventListener('click', function () { kaydet('red'); });
+      })();
+
+      // Mobil menü
+      (function () {
+        var dugme = document.getElementById('menu-dugme');
+        var menu = document.getElementById('mobil-menu');
+        function kapat() {
+          menu.classList.add('hidden');
+          dugme.setAttribute('aria-expanded', 'false');
+          dugme.setAttribute('aria-label', 'Open menu');
+        }
+        dugme.addEventListener('click', function () {
+          var acik = menu.classList.toggle('hidden') === false;
+          dugme.setAttribute('aria-expanded', String(acik));
+          dugme.setAttribute('aria-label', acik ? 'Close menu' : 'Open menu');
+        });
+        menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', kapat); });
+      })();
+
+      // İletişim formu: sayfadan ayrılmadan gönder, sonucu formun altında göster
+      (function () {
+        var form = document.getElementById('iletisim-formu');
+        var durum = document.getElementById('form-durum');
+        var buton = form.querySelector('button[type="submit"]');
+        function goster(metin, hata) {
+          durum.textContent = metin;
+          durum.className = 'text-[16px] font-medium ' + (hata ? 'text-red-700' : 'text-green-700');
+        }
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          buton.disabled = true;
+          buton.classList.add('opacity-60');
+          fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+            .then(function (r) { return r.json(); })
+            .then(function (sonuc) {
+              if (!sonuc.success) throw new Error(sonuc.message || 'not sent');
+              form.reset();
+              goster('Thank you, we have received your message. We will get back to you within 24 hours.', false);
+              if (window.gtag) gtag('event', 'generate_lead');
+              if (window.fbq) fbq('track', 'Lead');
+            })
+            .catch(function () {
+              goster('Your message could not be sent. Please email info@vefaglobal.com or reach us on WhatsApp.', true);
+            })
+            .finally(function () {
+              buton.disabled = false;
+              buton.classList.remove('opacity-60');
+            });
+        });
+      })();
+    </script>
+</body>
+</html>
